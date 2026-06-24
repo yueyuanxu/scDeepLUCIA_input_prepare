@@ -13,6 +13,6 @@ python ./python_scripts/cool_to_npy_with_convolution.py ./pseudobulk_contact_coo
 
 ### one-hot encoded genomic feature npy file
 ```bash
-python3 ./python_scripts/build_genomic_feature.py ./genomic_bin/mm10/genomic_bin_with_mark.bed.gz 5000 mm10.genome.fa genome_onehot_npy/mm10/isHC.seq_onehot.npy
-python3 ./python_scripts/build_sliced_genomic_feature.py ./anchor_list/mm10/isHC.anchor_list.txt.gz chr10 sliced_seq_array/mm10/isHC/isHC.seq_onehot.chr10.npy
+python3 ./python_scripts/build_genomic_feature.py ./genomic_bin/mm10/genomic_bin_with_mark.bed.gz 5000 mm10.genome.fa genome_onehot_npy/mm10/5kb.seq_onehot.npy
+python3 ./python_scripts/build_sliced_genomic_feature.py ./anchor_list/mm10.anchor_list.txt.gz chr10 genome_onehot_npy/mm10/5kb.seq_onehot.npy sliced_seq_array/mm10/5kb.seq_onehot.chr10.npy
 ```
