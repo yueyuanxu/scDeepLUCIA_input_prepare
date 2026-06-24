@@ -1,5 +1,5 @@
-## Generate input data (mm10 Astrocyte chr10) for scDeepLUCIA loop prediction
-### 25bp-resolution epigenomic feature npy file (mm10, astrocyte, chr10)
+## Generate input data (Astrocyte chr10) for scDeepLUCIA loop prediction
+### 25bp-resolution epigenomic feature npy file
 ```bash
 python -c "import sys, gzip, numpy, pyBigWig, itertools; from pathlib import Path; print('Package check passed')"
 python ./python_scripts/build_tiled_epigenomic_feature.py ./genomic_bin/mm10/genomic_bin_with_mark.bed.gz 5000 25 ./pseudobulk_ATAC_bigwig/Astrocyte_sig.pval.signal.bigwig epigenome_pval_npy/mm10/astrocyte/R1.5kb.npy
