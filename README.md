@@ -1,4 +1,4 @@
-## Generate input data (chr10) for scDeepLUCIA loop prediction
+## Generate input data (astrocyte.chr10) for scDeepLUCIA loop prediction
 ### 25bp-resolution epigenomic feature npy file
 ```bash
 python -c "import sys, gzip, numpy, pyBigWig, itertools, cooler, pysam; from scipy.signal import convolve2d; from pathlib import Path; print('Package check passed')"
