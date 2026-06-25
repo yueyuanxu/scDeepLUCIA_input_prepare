@@ -1,7 +1,7 @@
 ## Generate input data for scDeepLUCIA loop prediction
 
 ### 25bp-resolution epigenomic feature npy file
-[prepare pseudo-bulk .bigWig files](https://github.com/yueyuanxu/scHiCAR/tree/dev/5_downstream_analysis#23-generate-pvalue-bigwig-file-for-open-chromatin-visualization)
+[prepare pseudo-bulk bigWig files](https://github.com/yueyuanxu/scHiCAR/tree/dev/5_downstream_analysis#23-generate-pvalue-bigwig-file-for-open-chromatin-visualization)
 ```bash
 python -c "import sys, gzip, numpy, pyBigWig, itertools, cooler, pysam; from scipy.signal import convolve2d; from pathlib import Path; print('Package check passed')"
 python ./python_scripts/build_tiled_epigenomic_feature.py ./genomic_bin/mm10_genomic_bin_with_mark.bed.gz 5000 25 ./pseudobulk_ATAC_bigwig/Astrocyte_sig.pval.signal.bigwig epigenome_pval_npy/mm10/astrocyte/R1.5kb.npy
@@ -13,7 +13,7 @@ done
 ```
 
 ### 5kb-resolution contact matrix npy file
-[prepare pseudo-bulk .cool files](https://github.com/yueyuanxu/scHiCAR/tree/dev/5_downstream_analysis#24-aggregate-read-pairs-into-contact-matrix-in-the-cooler-format-5kb-resolution)
+[prepare pseudo-bulk cool files](https://github.com/yueyuanxu/scHiCAR/tree/dev/5_downstream_analysis#24-aggregate-read-pairs-into-contact-matrix-in-the-cooler-format-5kb-resolution)
 ```bash
 for i in chr{1..19} chrX
 do
