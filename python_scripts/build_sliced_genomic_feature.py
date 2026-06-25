@@ -3,8 +3,8 @@
 import sys
 import gzip
 import itertools 
-
 import numpy 
+from pathlib import Path
 
 def main():
 	if len(sys.argv) < 5:
