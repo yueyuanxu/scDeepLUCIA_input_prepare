@@ -13,7 +13,7 @@ python3 ./python_scripts/build_genomic_feature.py ./genomic_bin/mm10_genomic_bin
 for i in chr{1..19} chrX
 do
 echo "Generating seq_onehot.5kb.${i}.npy..."
-python3 ./python_scripts/build_sliced_genomic_feature.py ./anchor_list/mm10_anchor_list.txt.gz $i genome_onehot_npy/mm10/seq_onehot.5kb.npy sliced_seq_array/mm10/seq_onehot.5kb.${i}.npy
+python3 ./python_scripts/build_sliced_genomic_feature.py ./anchor_list/mm10_anchor_list.txt.gz $i genome_onehot_npy/mm10/seq_onehot.5kb.npy sliced_seq_array/mm10/isHC/isHC.seq_onehot.5kb.${i}.npy
 done
 ```
 
