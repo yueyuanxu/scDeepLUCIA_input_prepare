@@ -6,8 +6,9 @@ python -c "import sys, gzip, numpy, pyBigWig, itertools, cooler, pysam; from sci
 ```
 
 ### I. one-hot encoded genomic feature npy file
+[mm10.fa](https://hgdownload.gi.ucsc.edu/goldenPath/mm10/bigZips/mm10.fa.gz)
 ```bash
-python3 ./python_scripts/build_genomic_feature.py ./genomic_bin/mm10_genomic_bin_with_mark.bed.gz 5000 mm10.genome.fa genome_onehot_npy/mm10/seq_onehot.5kb.npy
+python3 ./python_scripts/build_genomic_feature.py ./genomic_bin/mm10_genomic_bin_with_mark.bed.gz 5000 mm10.fa genome_onehot_npy/mm10/seq_onehot.5kb.npy
 for i in chr{1..19} chrX
 do
 echo "Generating seq_onehot.5kb.${i}.npy..."
