@@ -3,11 +3,11 @@
 ### 25bp-resolution epigenomic feature npy file
 ```bash
 python -c "import sys, gzip, numpy, pyBigWig, itertools, cooler, pysam; from scipy.signal import convolve2d; from pathlib import Path; print('Package check passed')"
-python ./python_scripts/build_tiled_epigenomic_feature.py ./genomic_bin/mm10/genomic_bin_with_mark.bed.gz 5000 25 ./pseudobulk_ATAC_bigwig/Astrocyte_sig.pval.signal.bigwig epigenome_pval_npy/mm10/astrocyte/R1.5kb.npy
+python ./python_scripts/build_tiled_epigenomic_feature.py ./genomic_bin/mm10_genomic_bin_with_mark.bed.gz 5000 25 ./pseudobulk_ATAC_bigwig/Astrocyte_sig.pval.signal.bigwig epigenome_pval_npy/mm10/astrocyte/R1.5kb.npy
 for i in chr{1..19} chrX
 do
 echo "Generating R1.5kb.${i}.npy..."
-python ./python_scripts/build_sliced_multimark_epigenomic_feature.py ./genomic_bin/mm10/genomic_bin_with_mark.bed.gz $i epigenome_pval_npy/mm10/astrocyte R1 sliced_epi_array/mm10/astrocyte/R1.5kb.${i}.npy
+python ./python_scripts/build_sliced_multimark_epigenomic_feature.py ./genomic_bin/mm10_genomic_bin_with_mark.bed.gz $i epigenome_pval_npy/mm10/astrocyte R1 sliced_epi_array/mm10/astrocyte/R1.5kb.${i}.npy
 done
 ```
 
@@ -22,10 +22,10 @@ done
 
 ### one-hot encoded genomic feature npy file
 ```bash
-python3 ./python_scripts/build_genomic_feature.py ./genomic_bin/mm10/genomic_bin_with_mark.bed.gz 5000 mm10.genome.fa genome_onehot_npy/mm10/seq_onehot.5kb.npy
+python3 ./python_scripts/build_genomic_feature.py ./genomic_bin/mm10_genomic_bin_with_mark.bed.gz 5000 mm10.genome.fa genome_onehot_npy/mm10/seq_onehot.5kb.npy
 for i in chr{1..19} chrX
 do
 echo "Generating seq_onehot.5kb.${i}.npy..."
-python3 ./python_scripts/build_sliced_genomic_feature.py ./anchor_list/mm10.anchor_list.txt.gz $i genome_onehot_npy/mm10/seq_onehot.5kb.npy sliced_seq_array/mm10/seq_onehot.5kb.${i}.npy
+python3 ./python_scripts/build_sliced_genomic_feature.py ./anchor_list/mm10_anchor_list.txt.gz $i genome_onehot_npy/mm10/seq_onehot.5kb.npy sliced_seq_array/mm10/seq_onehot.5kb.${i}.npy
 done
 ```
